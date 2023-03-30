@@ -14,12 +14,12 @@ const activitySchema = new mongoose.Schema({
 // This Activitry creates the collection called activitimodels
 const Activitymodel = mongoose.model('Activity', activitySchema);
 
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
   const task1 = new Activitymodel({
     activity: 'activity 1',
   });
 
-  Activitymodel.insertMany([task1]);
+  await Activitymodel.insertMany([task1]);
 
   res.send(`<h1>Collection  Added</h1>`);
 });
