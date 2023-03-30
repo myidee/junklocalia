@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const port = process.env.PORT || 3000;
 
 mongoose.connect(
-  'mongodb://127.0.0.1:27017/Activities');
+  'mongodb://localhost:27017/Activities');
 
 // Create a Schema object
 const activitySchema = new mongoose.Schema({
